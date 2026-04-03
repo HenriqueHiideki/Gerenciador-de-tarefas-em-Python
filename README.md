@@ -1,27 +1,43 @@
-📋 Gerenciador de Tarefas em Python
+# 📋 Gerenciador de Tarefas (CLI) em Python
 
-Um sistema simples de gerenciamento de tarefas via terminal (CLI), desenvolvido em Python.
-Permite criar, listar, concluir, remover e filtrar tarefas, com persistência em arquivo JSON.
+Um sistema simples de gerenciamento de tarefas via terminal (CLI), desenvolvido em Python, com persistência em JSON.
 
-🚀 Funcionalidades
-✅ Adicionar tarefas
-📄 Listar todas as tarefas
-✔️ Marcar tarefas como concluídas
-❌ Remover tarefas
-🔍 Filtrar tarefas (concluídas ou pendentes)
-💾 Salvamento automático em arquivo (tarefas.json)
-🧠 Estrutura do Projeto
-.
-├── tarefas.json   
-├── main.py        
-⚙️ Requisitos
-Python 3.6 ou superior
+---
 
-Não é necessário instalar bibliotecas externas, pois o projeto utiliza apenas módulos nativos:
+## 🚀 Funcionalidades
 
-json
-os
+- ✅ Criar tarefas  
+- 📋 Listar tarefas  
+- ✔️ Marcar como concluída  
+- ❌ Remover tarefas  
+- 🔍 Filtrar por status (concluída/pendente)  
+- 💾 Salvamento automático em arquivo  
 
+---
+
+## 🧠 Conceitos aplicados
+
+- Programação Orientada a Objetos (POO)  
+- Manipulação de arquivos com JSON  
+- Tratamento de exceções (`try/except`)  
+- Estruturação de código em classes  
+- Interface de linha de comando (CLI)  
+
+---
+
+## ⚙️ Requisitos
+
+- Python 3.6 ou superior  
+
+Não há dependências externas (apenas bibliotecas nativas).
+
+---
+
+## 🖥️ Como usar
+
+Ao executar o programa, você verá o seguinte menu:
+
+```
 --- GERENCIADOR DE TAREFAS ---
 1 - Adicionar tarefa
 2 - Listar tarefas
@@ -30,25 +46,30 @@ os
 5 - Filtrar concluídas
 6 - Filtrar pendentes
 0 - Sair
-📌 Exemplos de uso
-Para adicionar uma tarefa:
-Escolha a opção 1
-Informe título e descrição
-Para concluir ou remover:
-Primeiro liste as tarefas (2)
-Use o índice exibido
-💾 Persistência de Dados
+```
 
-As tarefas são armazenadas automaticamente no arquivo:
+---
 
-tarefas.json
-O arquivo é criado automaticamente na primeira execução
-Os dados são mantidos entre execuções do programa
-🧩 Estrutura do Código
-Classe Tarefa
+### Classe `Tarefa`
 
-Representa uma tarefa individual:
+Representa uma tarefa individual com os atributos:
 
-titulo
-descricao
-concluida
+- `titulo`  
+- `descricao`  
+- `concluida`  
+
+---
+
+### Classe `GerenciadorTarefas`
+
+Responsável por:
+
+- Carregar tarefas do arquivo  
+- Salvar tarefas  
+- Adicionar novas tarefas  
+- Listar tarefas  
+- Concluir tarefas  
+- Remover tarefas  
+- Filtrar tarefas  
+
+---
